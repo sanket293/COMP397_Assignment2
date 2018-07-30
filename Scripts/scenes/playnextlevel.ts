@@ -304,6 +304,7 @@ namespace scenes {
       );
 
       // score board
+      this.addChild(managers.Game.ScoreBoard.LivesImage);
       this.addChild(managers.Game.ScoreBoard.LivesLabel);
       this.addChild(managers.Game.ScoreBoard.ScoreLabel);
       this.addChild(managers.Game.ScoreBoard.PickupLable);

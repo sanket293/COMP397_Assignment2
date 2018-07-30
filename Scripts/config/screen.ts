@@ -39,10 +39,15 @@ namespace config {
     public static PLAY_LABEL_Y: number = Screen.TOP_SPACE * 2;
 
     public static SCOREBORD_LABLES_HEIGHT: number = Screen.TOP_SPACE;
+
     public static LIVES_LABEL: number = Screen.TOP_SPACE;
     public static SCORE_LABEL: number = 390;
 
-    public static PICKUP_LABEL: number = Screen.WIDTH - 125;
+    public static LIVES_LABEL_X: number = Screen.WIDTH - Screen.DISTANCE;
+    public static LIVES_IMAGE_X: number = Screen.WIDTH - 200;
+    public static LIVES_Y: number = Screen.TOP_SPACE * 3;
+
+    public static PICKUP_LABEL: number = Screen.WIDTH - Screen.DISTANCE;
     public static PICKUP_IMAGE: number = Screen.WIDTH - 180;
 
     public static POINTS_FOR_BUG_ENEMY: number = 150;

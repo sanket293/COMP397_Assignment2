@@ -4,9 +4,10 @@ namespace managers {
     private _lives: number;
     private _score: number;
     private _pickupNumber: number;
-    private _highScore: number;
     private _livesLabel: objects.Label;
+    private _livesImage: objects.Button;
     private _scoreLabel: objects.Label;
+    private _highScore: number;
     private _highScoreLabel: objects.Label;
     private _pickupLabel: objects.Label;
     private _pickUpImage: objects.Button;
@@ -27,6 +28,17 @@ namespace managers {
      */
     get LivesLabel(): objects.Label {
       return this._livesLabel;
+    }
+
+    /**
+     *
+     *
+     * @readonly
+     * @type {objects.Button}
+     * @memberof ScoreBoard
+     */
+    get LivesImage(): objects.Button {
+      return this._livesImage;
     }
 
     /**
@@ -59,7 +71,7 @@ namespace managers {
       if (this._lives <= 0) {
         managers.Game.CurrentState = config.Scene.END;
       } else {
-        this.LivesLabel.text = "Lives: " + this._lives;
+        this.LivesLabel.text = ": " + this._lives;
       }
     }
 
@@ -98,7 +110,7 @@ namespace managers {
       if (this.PickUpNumber == config.Screen.PICKUP_LIFE_RENEW_NUMBER) {
         this.setPickupNumber = 0;
         this.Lives += 1;
-        this.LivesLabel.text = "Lives: " + this.Lives;
+        this.LivesLabel.text = ": " + this.Lives;
         this.PickupLable.text = ": " + this._pickupNumber;
       }
     }
@@ -117,7 +129,7 @@ namespace managers {
         this.Score = this.Score - config.Screen.POINTS_FOR_NEW_LIFE;
         this.Lives += 1;
         this.ScoreLabel.text = "Score: " + this._score;
-        this.LivesLabel.text = "Lives: " + this.Lives;
+        this.LivesLabel.text = ": " + this.Lives;
       }
     }
 
@@ -130,13 +142,20 @@ namespace managers {
 
     // public methods
     public Start() {
+      this._livesImage = new objects.Button(
+        "LivesImage",
+        config.Screen.LIVES_IMAGE_X,
+        config.Screen.LIVES_Y,
+        false
+      );
+
       this._livesLabel = new objects.Label(
-        "Lives: 99",
+        ": 99",
         "30px",
         "Dock51",
         "#FFFF00",
-        config.Screen.LIVES_LABEL,
-        config.Screen.SCOREBORD_LABLES_HEIGHT,
+        config.Screen.LIVES_LABEL_X,
+        config.Screen.LIVES_Y + 15,
         false
       );
 
@@ -147,7 +166,7 @@ namespace managers {
         false
       );
       this._pickupLabel = new objects.Label(
-        " : 99999",
+        ": 99999",
         "30px",
         "Dock51",
         "#FFFF00",

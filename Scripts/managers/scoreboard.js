@@ -24,6 +24,20 @@ var managers;
             enumerable: true,
             configurable: true
         });
+        Object.defineProperty(ScoreBoard.prototype, "LivesImage", {
+            /**
+             *
+             *
+             * @readonly
+             * @type {objects.Button}
+             * @memberof ScoreBoard
+             */
+            get: function () {
+                return this._livesImage;
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(ScoreBoard.prototype, "ScoreLabel", {
             /**
              * This returns a reference to the ScoreLabel object
@@ -61,7 +75,7 @@ var managers;
                     managers.Game.CurrentState = config.Scene.END;
                 }
                 else {
-                    this.LivesLabel.text = "Lives: " + this._lives;
+                    this.LivesLabel.text = ": " + this._lives;
                 }
             },
             enumerable: true,
@@ -113,7 +127,7 @@ var managers;
                 if (this.PickUpNumber == config.Screen.PICKUP_LIFE_RENEW_NUMBER) {
                     this.setPickupNumber = 0;
                     this.Lives += 1;
-                    this.LivesLabel.text = "Lives: " + this.Lives;
+                    this.LivesLabel.text = ": " + this.Lives;
                     this.PickupLable.text = ": " + this._pickupNumber;
                 }
             },
@@ -134,7 +148,7 @@ var managers;
                     this.Score = this.Score - config.Screen.POINTS_FOR_NEW_LIFE;
                     this.Lives += 1;
                     this.ScoreLabel.text = "Score: " + this._score;
-                    this.LivesLabel.text = "Lives: " + this.Lives;
+                    this.LivesLabel.text = ": " + this.Lives;
                 }
             },
             enumerable: true,
@@ -143,9 +157,10 @@ var managers;
         // private methods
         // public methods
         ScoreBoard.prototype.Start = function () {
-            this._livesLabel = new objects.Label("Lives: 99", "30px", "Dock51", "#FFFF00", config.Screen.LIVES_LABEL, config.Screen.SCOREBORD_LABLES_HEIGHT, false);
+            this._livesImage = new objects.Button("LivesImage", config.Screen.LIVES_IMAGE_X, config.Screen.LIVES_Y, false);
+            this._livesLabel = new objects.Label(": 99", "30px", "Dock51", "#FFFF00", config.Screen.LIVES_LABEL_X, config.Screen.LIVES_Y + 15, false);
             this._pickUpImage = new objects.Button("PickUps", config.Screen.PICKUP_IMAGE, config.Screen.SCOREBORD_LABLES_HEIGHT, false);
-            this._pickupLabel = new objects.Label(" : 99999", "30px", "Dock51", "#FFFF00", config.Screen.PICKUP_LABEL, config.Screen.SCOREBORD_LABLES_HEIGHT, false);
+            this._pickupLabel = new objects.Label(": 99999", "30px", "Dock51", "#FFFF00", config.Screen.PICKUP_LABEL, config.Screen.SCOREBORD_LABLES_HEIGHT, false);
             this._scoreLabel = new objects.Label("Score: 99999", "30px", "Dock51", "#FFFF00", config.Screen.SCORE_LABEL, config.Screen.SCOREBORD_LABLES_HEIGHT, false);
             this._highScoreLabel = new objects.Label("High Score: 999999", "60px", "Dock51", "#FFFF00", config.Screen.HALF_WIDTH, config.Screen.HALF_HEIGHT, true);
             this.HighScore = 0;

@@ -26,10 +26,8 @@ var scenes;
             this._replayButton = new objects.Button("ReplayButton", 320, 380, true);
             this.Main();
         };
-        End.prototype.Update = function () {
-        };
-        End.prototype.Reset = function () {
-        };
+        End.prototype.Update = function () { };
+        End.prototype.Reset = function () { };
         End.prototype.Destroy = function () {
             this.removeAllChildren();
         };

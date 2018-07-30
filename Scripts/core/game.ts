@@ -18,6 +18,7 @@
     { id: "PlayNextLevelButton", src: "/Assets/images/medium.png" },
     { id: "ExitButton", src: "/Assets/images/exit.png" },
     { id: "InstructionButton", src: "/Assets/images/instruction.png" },
+    { id: "LivesImage", src: "/Assets/images/LivesImage.gif" },
     { id: "ReplayButton", src: "/Assets/images/restart.png" },
     { id: "PickUps", src: "/Assets/images/pickup.png" },
     { id: "Stone", src: "/Assets/images/stone.png" },
