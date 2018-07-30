@@ -23,8 +23,8 @@ var scenes;
         Menu.prototype.Start = function () {
             this._welcomeLabel = new objects.Label("Alien Shooter!", "60px", "Consolas", "#000000", config.Screen.HALF_WIDTH, config.Screen.TOP_SPACE * 2, true);
             this._startButton = new objects.Button("StartButton", config.Screen.HALF_WIDTH, config.Screen.HALF_HEIGHT, true);
-            this._instructionButton = new objects.Button("InstructionButton", config.Screen.DISTANCE, config.Screen.HEIGHT - config.Screen.DISTANCE, true);
-            this._exitButton = new objects.Button("ExitButton", config.Screen.WIDTH - config.Screen.DISTANCE, config.Screen.HEIGHT - config.Screen.DISTANCE, true);
+            this._instructionButton = new objects.Button("InstructionButton", config.Screen.INSTUCTION_BUTTON_X, config.Screen.INSTUCTION_BUTTON_Y, true);
+            this._exitButton = new objects.Button("ExitButton", config.Screen.EXIT_BUTTON_X, config.Screen.EXIT_BUTTON_Y, true);
             this.Main();
         };
         Menu.prototype.Update = function () { };

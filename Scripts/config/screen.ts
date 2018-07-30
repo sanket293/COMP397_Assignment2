@@ -14,6 +14,30 @@ namespace config {
 
     public static TOP_SPACE: number = 20;
 
+    public static SMALL_BACKBUTTON_X: number = Screen.TOP_SPACE * 2;
+    public static SMALL_BACKBUTTON_Y: number = Screen.TOP_SPACE * 2;
+
+    public static BACKBUTTON_X: number = Screen.DISTANCE - Screen.TOP_SPACE;
+    public static BACKBUTTON_Y: number = Screen.TOP_SPACE * 4;
+
+    public static INSTUCTION_BUTTON_X: number = Screen.DISTANCE;
+    public static INSTUCTION_BUTTON_Y: number =
+      Screen.HEIGHT - Screen.TOP_SPACE * 4;
+
+    public static EXIT_BUTTON_X: number = Screen.WIDTH - Screen.DISTANCE;
+    public static EXIT_BUTTON_Y: number = Screen.HEIGHT - Screen.TOP_SPACE * 4;
+
+    public static PLAY_BUTTON_X: number = Screen.HALF_WIDTH;
+    public static PLAY_BUTTON_Y: number =
+      Screen.HALF_HEIGHT - Screen.TOP_SPACE * 2;
+
+    public static PLAY_NEXTLEVEL_BUTTON_X: number = Screen.HALF_WIDTH;
+    public static PLAY_NEXTLEVEL_BUTTON_Y: number =
+      Screen.HALF_HEIGHT + Screen.TOP_SPACE * 2;
+
+    public static PLAY_LABEL_X: number = Screen.HALF_WIDTH;
+    public static PLAY_LABEL_Y: number = Screen.TOP_SPACE * 2;
+
     public static SCOREBORD_LABLES_HEIGHT: number = Screen.TOP_SPACE;
     public static LIVES_LABEL: number = Screen.TOP_SPACE;
     public static SCORE_LABEL: number = 390;

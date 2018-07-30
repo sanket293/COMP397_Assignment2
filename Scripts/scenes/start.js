@@ -21,16 +21,14 @@ var scenes;
         // private methods
         // public methods
         Start.prototype.Start = function () {
-            this._welcomeLabel = new objects.Label("Play !", "60px", "Consolas", "#000000", 320, 240, true);
-            this._playButton = new objects.Button("PlayButton", 320, 360, true);
-            this._playNextLevelButton = new objects.Button("PlayNextLevelButton", 320, 380, true);
-            this._backButton = new objects.Button("BackButton", 320, 400, true);
+            this._welcomeLabel = new objects.Label("Play !", "60px", "Consolas", "#000000", config.Screen.PLAY_LABEL_X, config.Screen.PLAY_LABEL_Y, true);
+            this._playButton = new objects.Button("PlayButton", config.Screen.PLAY_BUTTON_X, config.Screen.PLAY_BUTTON_Y, true);
+            this._playNextLevelButton = new objects.Button("PlayNextLevelButton", config.Screen.PLAY_NEXTLEVEL_BUTTON_X, config.Screen.PLAY_NEXTLEVEL_BUTTON_Y, true);
+            this._backButton = new objects.Button("BackButton", config.Screen.BACKBUTTON_X, config.Screen.BACKBUTTON_Y, true);
             this.Main();
         };
-        Start.prototype.Update = function () {
-        };
-        Start.prototype.Reset = function () {
-        };
+        Start.prototype.Update = function () { };
+        Start.prototype.Reset = function () { };
         Start.prototype.Destroy = function () {
             this.removeAllChildren();
         };

@@ -31,6 +31,7 @@ var scenes;
                 this._pickUps[count] = new objects.PickUps();
             }
         };
+        // this function will remove bullets from array list and scene
         Play.prototype._removeCurrentBullet = function (bullet) {
             var temp = bullet;
             this._bulletClicked = this._bulletClicked.filter(function (obj) { return obj !== bullet; });
@@ -61,7 +62,7 @@ var scenes;
             this._pickUpsNum = config.Screen.PICKUP_NUMBER;
             this._generatePowerups();
             // back button
-            this._backButton = new objects.Button("BackButton", 320, 360, true);
+            this._backButton = new objects.Button("SmallBackButton", config.Screen.SMALL_BACKBUTTON_X, config.Screen.SMALL_BACKBUTTON_Y, true);
             // bullet
             this._bulletClicked = new Array();
             this.Main();

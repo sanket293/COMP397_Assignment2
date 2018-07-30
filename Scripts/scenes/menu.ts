@@ -34,14 +34,15 @@ namespace scenes {
       );
       this._instructionButton = new objects.Button(
         "InstructionButton",
-        config.Screen.DISTANCE,
-        config.Screen.HEIGHT - config.Screen.DISTANCE,
+        config.Screen.INSTUCTION_BUTTON_X,
+        config.Screen.INSTUCTION_BUTTON_Y,
         true
       );
       this._exitButton = new objects.Button(
         "ExitButton",
-        config.Screen.WIDTH - config.Screen.DISTANCE,
-        config.Screen.HEIGHT - config.Screen.DISTANCE,
+        config.Screen.EXIT_BUTTON_X,
+        config.Screen.EXIT_BUTTON_Y,
+
         true
       );
 

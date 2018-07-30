@@ -30,11 +30,11 @@ var objects;
         };
         // public methods
         Background.prototype.Start = function () {
-            this._verticalSpeed = -config.Screen.BACKGROUND_SPEED; // 5 pixels per frame
+            this._horizontalSpeed = -config.Screen.BACKGROUND_SPEED; // 5 pixels per frame
             this.Reset();
         };
         Background.prototype.Update = function () {
-            this.x += this._verticalSpeed;
+            this.x += this._horizontalSpeed;
             this._checkBounds();
         };
         Background.prototype.Reset = function () {

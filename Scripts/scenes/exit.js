@@ -25,10 +25,8 @@ var scenes;
             this._backButton = new objects.Button("BackButton", 320, 360, true);
             this.Main();
         };
-        Exit.prototype.Update = function () {
-        };
-        Exit.prototype.Reset = function () {
-        };
+        Exit.prototype.Update = function () { };
+        Exit.prototype.Reset = function () { };
         Exit.prototype.Destroy = function () {
             this.removeAllChildren();
         };

@@ -79,7 +79,12 @@ namespace scenes {
       this._generatePowerups();
 
       // back button
-      this._backButton = new objects.Button("BackButton", 320, 360, true);
+      this._backButton = new objects.Button(
+        "SmallBackButton",
+        config.Screen.SMALL_BACKBUTTON_X,
+        config.Screen.SMALL_BACKBUTTON_Y,
+        true
+      );
 
       // bullet
       this._bulletClicked = new Array<objects.Bullet>();
